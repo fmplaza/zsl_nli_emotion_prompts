@@ -31,11 +31,11 @@ Get the predictions of the prompts `emo_name`, `expr_emo`, `feels_emo`, `wn_def`
 
 Run ```nli_main_prompts.py --data_dir 'your_dataset_file' --transformer 'the_transformer_path' --output_dir 'your_output_prediction_file' --id_prompt 'emo_name', 'expr_emo', 'feels_emo', 'wn_def'```
 
---transformer options: `roberta-large-mnli`, `facebook/bart-large-mnli`, `microsoft/deberta-v2-xlarge-mnli`
+--transformer options: `roberta-large-mnli`, `facebook/bart-large-mnli`, `microsoft/deberta-v2-xlarge-mnli`.
 
---id_prompt options: an unique prompt or a list of prompts: `emo_name`, `expr_emo`, `feels_emo`, `wn_def`
+--id_prompt options: an unique prompt or a list of prompts: `emo_name`, `expr_emo`, `feels_emo`, `wn_def`.
 
---output_file: The output directory where the model predictions will be written
+--output_file: The output directory where the model predictions will be written.
 
 ### Experiment 2
 
@@ -43,8 +43,9 @@ Get the predictions of the synonyms prompts `emo_s`, `expr_s`, `feels_s`:
 
 Run ```nli_syn_prompts.py --data_dir 'your_dataset_file' --output_dir 'your_output_prediction_file' --id_prompt 'emo_s', 'expr_s', 'feels_s'```
 
---id_prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`
---output_file: The output directory where the model predictions will be written
+--id_prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`.
+
+--output_file: The output directory where the model predictions will be written.
 
 ### Experiment 3
 
@@ -59,8 +60,10 @@ The predictions will be stored in 'your_output_file'. Use this file in the follo
 Run ```esembles.py --data_dir 'your_dataset_file' --output_dir 'your_output_prediction_file'
 
 --data_dir: The input data dir. Should contain the .tsv file with the predictions.
---name_dataset options: tec, blog, isear
---output_file: The output directory where the model predictions will be written
+
+--name_dataset options: tec, blog, isear.
+
+--output_file: The output directory where the model predictions will be written.
 
 ### Experiment 4
 
@@ -70,6 +73,8 @@ After merging the predictions of Experiment 1 and Experiment 2, please run the f
 
 Run ```nli_emolex_prompt.py --data_dir 'your_dataset_file' --output_dir 'your_output_prediction_file'
 
---id_prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`
+--id_prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`.
 
---output_file: The output directory where the model predictions will be written
+--output_file: The output directory where the model predictions will be written.
+
+Should you have any doubts, please contact Flor Miriam Plaza-del-Arco by email: fmplaza@ujaen.es
