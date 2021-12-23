@@ -35,7 +35,7 @@ Run ```nli_main_prompts.py --data_dir 'your_dataset_file' --transformer 'the_tra
 
 --id_prompt options: an unique prompt or a list of prompts: `emo_name`, `expr_emo`, `feels_emo`, `wn_def`
 
-A file with the predictions will be stored in the directory specified (--output_dir)
+--output_file: The output directory where the model predictions will be written
 
 ### Experiment 2
 
@@ -44,24 +44,27 @@ Get the predictions of the synonyms prompts `emo_s`, `expr_s`, `feels_s`:
 Run ```nli_syn_prompts.py --data_dir 'your_dataset_file' --output_dir 'your_output_prediction_file' --id_prompt 'emo_s', 'expr_s', 'feels_s'```
 
 --id_prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`
-
-A file with the predictions will be stored in the directory specified (--output_dir)
+--output_file: The output directory where the model predictions will be written
 
 ### Experiment 3
 
-Get the predictions of the emolex prompt `emoLex`:
+Get the predictions of the ensemble models:
+
+Important: before running the following scripts make sure the predictions of the previous experiments (Experiment 1 and Experiment 2) have been stored in your ouput files. Use these files to run the following command:
+
+```merge_predictions.py --predictions_exp1 'your_exp1_prediction_file' --predictions exp2 'your_exp2_prediction_file'' --output_file 'your_output_file'```
+
+The predictions will be stored in 'your_output_file'. Use this file in the following command:
 
 Run ```esembles.py --data_dir 'your_dataset_file' --output_dir 'your_output_prediction_file'
 
---id_prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`
-
-A file with the predictions of the ensemble model developed and the oracle ensemble will be stored in the directory specified (--output_dir)
+--data_dir: The input data dir. Should contain the .tsv file with the predictions.
+--name_dataset options: tec, blog, isear
+--output_file: The output directory where the model predictions will be written
 
 ### Experiment 4
 
-Get the predictions of the ensemble models:
-
-Important: before running the following command make sure the predictions of the previous experiments have been stored in your ouput files. Use these files to run the following command:
+Get the predictions of the emolex prompt `emoLex`:
 
 After merging the predictions of Experiment 1 and Experiment 2, please run the following code:
 
@@ -69,4 +72,4 @@ Run ```nli_emolex_prompt.py --data_dir 'your_dataset_file' --output_dir 'your_ou
 
 --id_prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`
 
-A file with the predictions will be stored in the directory specified (--output_dir)
+--output_file: The output directory where the model predictions will be written
