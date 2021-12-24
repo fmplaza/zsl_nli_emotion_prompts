@@ -15,7 +15,6 @@ def compute_metrics(data, y_true, y_pred, probs_emotions, id_prompt, output_file
     data.to_csv(output_file, sep="\t", index=False)
 
 def compute_entailment(data, template_emo_name, template_expr_emo, template_feels_emo, prompts, output_file):
-    
     print("Loading model...")
 
     model = AutoModelForSequenceClassification.from_pretrained('microsoft/deberta-v2-xlarge-mnli')
@@ -135,5 +134,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
-#python roberta_prediction.py --data_file '/mnt/beegfs/fmplaza/Datasets/Emotions/unify-emotion-datasets/datasets_tsv/TEC' --transformer 'roberta-large-mnli' --output_file 'predictions_syn' --id_prompt 'EmoName'
