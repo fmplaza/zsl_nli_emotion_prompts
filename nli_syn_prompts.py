@@ -15,6 +15,7 @@ def compute_metrics(data, y_true, y_pred, probs_emotions, id_prompt, output_file
     data.to_csv(output_file, sep="\t", index=False)
 
 def compute_entailment(data, template_emo_name, template_expr_emo, template_feels_emo, prompts, output_file):
+    
     print("Loading model...")
 
     model = AutoModelForSequenceClassification.from_pretrained('microsoft/deberta-v2-xlarge-mnli')
@@ -92,6 +93,7 @@ def main():
     args = parser.parse_args()
     data_file = args.data_file
     prompts = args.prompt
+    output_file = args.output_file
     
     template_emo_s = {
         'sadness': ['sadness', 'unhappy', 'grief', 'sorrow', 'loneliness', 'depression'],
