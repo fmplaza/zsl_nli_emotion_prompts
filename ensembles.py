@@ -54,7 +54,6 @@ def oracle(data, name_dataset, output_file):
     compute_metrics(data, y_true, y_pred, output_file, t_ensemble)
 
 def main():
-    
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--data_file",
@@ -94,4 +93,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
