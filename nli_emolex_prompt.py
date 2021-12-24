@@ -86,5 +86,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
-#python roberta_prediction.py --data_dir '/mnt/beegfs/fmplaza/Datasets/Emotions/unify-emotion-datasets/datasets_tsv/TEC' --transformer 'roberta-large-mnli' --output_dir 'predictions' --id_prompt 'EmoName'
