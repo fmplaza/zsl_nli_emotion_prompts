@@ -22,8 +22,6 @@ parser.add_argument("--output_file",
                     type=str,
                     required=True,
                     help="The output file with the predictions of the Exp 1 and Exp2.")
-
-
   
 args = parser.parse_args()
     
