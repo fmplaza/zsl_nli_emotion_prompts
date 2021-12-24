@@ -75,5 +75,3 @@ Run ```nli_emolex_prompt.py --data_file 'your_dataset_file.tsv' --output_file 'y
 --data_file: The emotion dataset path file.
 
 --output_file: The output directory where the model predictions will be written. Format required: '.tsv'
-
-Should you have any doubts, please contact Flor Miriam Plaza-del-Arco by email: fmplaza@ujaen.es
