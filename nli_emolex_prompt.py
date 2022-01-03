@@ -8,6 +8,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from sklearn.metrics import classification_report
 
 def compute_metrics(data, y_true, y_pred,output_file):
+    print("Model perfomance\n")
     print(classification_report(y_true, y_pred))
     data['EmoLex'] = y_pred
     data.to_csv(output_file, sep="\t", index=False)
@@ -80,7 +81,7 @@ def main():
     data = pd.read_csv(data_file, sep="\t")
     
     with open('./lexicon/emolex.pickle', 'rb') as handle:
-    emolex_dic = pickle.load(handle)
+        emolex_dic = pickle.load(handle)
 
     compute_entailment(data, emolex_dic, output_file)
     
