@@ -44,10 +44,10 @@ def compute_entailment(data, template_emo_name, template_expr_emo, template_feel
                     if id_prompt == "emo_s":
                         template = template_emo_name
                         context = ''
-                    if id_prompt == "expr_emo":
+                    if id_prompt == "expr_s":
                         template = template_expr_emo
                         context = 'This text expresses '
-                    elif id_prompt == "feels_emo":
+                    elif id_prompt == "feels_s":
                         template = template_feels_emo
                         context = 'This person feels '
                     for syn_prompt in template[label]:
@@ -63,7 +63,7 @@ def compute_entailment(data, template_emo_name, template_expr_emo, template_feel
             final_emo = max(dict_emo_conf, key=dict_emo_conf.get)           
             y_pred.append(final_emo)
             y_true.append(label_list[i])
-        print("Model performance:")                                                 
+        print("Model performance with prompt:", id_prompt)                                                 
         compute_metrics(data, y_true, y_pred, probs_emotions, id_prompt, output_file)
 
 def main():
@@ -88,7 +88,7 @@ def main():
                         nargs="+",
                         required=True,
                         help="The prompt or list of prompts to interpret the emotion selected in the list: \
-                        emo_s, expr_s, feelss")
+                        emo_s, expr_s, feels_s")
     
     args = parser.parse_args()
     data_file = args.data_file
