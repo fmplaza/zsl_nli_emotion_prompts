@@ -2,14 +2,14 @@
 
 This repository contains the code of the paper submitted to NAACL 2022 "Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Domains".
 
-To download the emotion datasets and the lexicon resource, please go to these URLs:
+To download the emotion datasets and the lexicon resource, please go to the following links:
 
 1. [ISEAR](https://www.unige.ch/cisa/research/materials-and-online-research/research-material/)
 2. [TEC](http://saifmohammad.com/WebPages/SentimentEmotionLabeledData.html)
-3. [Blog:](http://saimacs.github.io/pubs/2007-TSD-paper.pdf) By contacting the authors.
+3. [Blog:](http://saimacs.github.io/pubs/2007-TSD-paper.pdf) By contacting the authors
 4. [Emolex](https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm)
 
-To download the three pretrained entailment models (RoBERTa, BART, DeBERTa), please go to these URLs:
+To download the three pretrained entailment models (RoBERTa, BART, DeBERTa), please go to the following links:
 
 1. [RoBERTa](https://huggingface.co/roberta-large-mnli)
 2. [BART](https://huggingface.co/facebook/bart-large-mnli)
@@ -34,9 +34,9 @@ Get the predictions of the prompts `emo_name`, `expr_emo`, `feels_emo`, `wn_def`
 
 Run ```nli_prompts.py --data_file 'your_dataset_file.tsv' --transformer 'the_transformer_path' --output_file 'your_output_prediction_file.tsv' --prompt 'emo_name', 'expr_emo', 'feels_emo', 'wn_def'```
 
---transformer options: `roberta-large-mnli`, `facebook/bart-large-mnli`, `microsoft/deberta-v2-xlarge-mnli`.
+--transformer options: `roberta-large-mnli`, `facebook/bart-large-mnli`, `microsoft/deberta-v2-xlarge-mnli`
 
---prompt options: an unique prompt or a list of prompts: `emo_name`, `expr_emo`, `feels_emo`, `wn_def`.
+--prompt options: an unique prompt or a list of prompts: `emo_name`, `expr_emo`, `feels_emo`, `wn_def`
 
 --output_file: The output directory where the model predictions will be written. Format required: '.tsv'
 
@@ -46,7 +46,7 @@ Get the predictions of the synonyms prompts `emo_s`, `expr_s`, `feels_s`:
 
 Run ```nli_syn_prompts.py --data_file 'your_dataset_file.tsv' --output_file 'your_output_prediction_file.tsv' --prompt 'emo_s', 'expr_s', 'feels_s'```
 
---prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`.
+--prompt options: an unique prompt or a list of prompts: `emo_s`, `expr_s`, `feels_s`
 
 --output_file: The output directory where the model predictions will be written. Format required: '.tsv'
 
@@ -62,9 +62,9 @@ The predictions will be stored in 'your_output_file.tsv'. Use this file as an in
 
 Run ```ensembles.py --data_file 'your_predictions_file.tsv' --output_file 'ensemble_predictions.tsv'```
 
---data_file: The input data file. Should contain the .tsv file with the predictions.
+--data_file: The input data file. Should contain the .tsv file with the predictions
 
---name_dataset options: tec, blog, isear.
+--name_dataset options: tec, blog, isear
 
 ### Experiment 4
 
@@ -72,6 +72,6 @@ Get the predictions of the emolex prompt `emoLex`:
 
 Run ```nli_emolex_prompt.py --data_file 'your_dataset_file.tsv' --output_file 'your_output_prediction_file.tsv'```
 
---data_file: The emotion dataset path file.
+--data_file: The emotion dataset path file
 
 --output_file: The output directory where the model predictions will be written. Format required: '.tsv'
