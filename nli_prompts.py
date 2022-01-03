@@ -15,6 +15,7 @@ def compute_metrics(data, y_true, y_pred, probs_emotions, id_prompt, output_file
     data.to_csv(output_file, sep="\t", index=False)
 
 def compute_entailment(data, transfomer, template, prompts, output_file):
+    
     print("Loading model...")
 
     model = AutoModelForSequenceClassification.from_pretrained(transfomer)
@@ -59,7 +60,7 @@ def compute_entailment(data, transfomer, template, prompts, output_file):
             y_pred.append(unique_labels[np.argmax(np.array(probs))])
             probs_emotions.append(probs)
             y_true.append(label_list[index])
-        print("\nModel performance:")
+        print("\nModel performance with prompt:", id_prompt)
         compute_metrics(data, y_true, y_pred, probs_emotions, id_prompt, output_file)
 
 def main():
@@ -84,7 +85,7 @@ def main():
                         nargs="+",
                         required=True,
                         help="The prompt or list of prompts to interpret the emotion selected in the list: \
-                        emo_name, expr_emo, feels_emo, wn_def, emo_s, expr_s, feels_s")
+                        emo_name, expr_emo, feels_emo, wn_def")
     
     parser.add_argument("--transformer", 
                         default="roberta-large-mnli",
@@ -101,7 +102,7 @@ def main():
     template = {
                 'sadness': ['This text expresses sadness', 
                             'This person feels sad', 
-                            'This pserson expresses emotions experienced when not in a state of well-being'],
+                            'This person expresses emotions experienced when not in a state of well-being'],
                 'joy':     ['This text expresses joy' ,
                             'This person feels joyful', 
                             'This person expresses a feeling of great pleasure and happiness.'],
@@ -126,7 +127,7 @@ def main():
                 'noemo':    ['This text does not expresses any emotion', 
                              'This person does not feel any emotion', 
                              'This person does not feel any emotion']
-                }
+    }
     
     data = pd.read_csv(data_file, sep="\t")
     
