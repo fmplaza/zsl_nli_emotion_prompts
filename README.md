@@ -56,7 +56,7 @@ Get the predictions of the ensemble models:
 
 **Important:** before running the following scripts make sure the predictions of the previous experiments (Experiment 1 using the DeBERTa model and Experiment 2) have been stored in your ouput files. Use these files in the following command:
 
-```merge_predictions.py --exp1_predictions 'your_exp1_prediction_file.tsv' --exp2_predictions 'your_exp2_prediction_file.tsv'' --output_file 'your_output_file.tsv'```
+```merge_predictions.py --exp1_predictions 'your_exp1_prediction_file.tsv' --exp2_predictions 'your_exp2_prediction_file.tsv' --output_file 'your_output_file.tsv'```
 
 The predictions will be stored in 'your_output_file.tsv'. Use this file as an input of --data_file in the following command:
 
