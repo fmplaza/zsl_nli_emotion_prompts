@@ -47,13 +47,14 @@ def oracle(data, name_dataset, output_file):
             y_pred.append(label_gold)
         else:
             FN += 1
-            y_pred.append(row['expr_s'])
+            y_pred.append(row['emo_s'])
     t_ensemble = 'oracle'
     
     print("Oracle ensemble performance\n")
     compute_metrics(data, y_true, y_pred, output_file, t_ensemble)
 
 def main():
+    
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--data_file",
