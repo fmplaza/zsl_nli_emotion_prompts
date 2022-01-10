@@ -26,7 +26,7 @@ To download the three pretrained entailment models (RoBERTa, BART, DeBERTa), ple
 * pandas 1.0.3
 * numpy 1.18.2
 
-**Important:** Before running the following experiments, when loading the datasets in Python, rename the gold label column with the name 'emotion' and the instance text with 'text'.
+**Important:** Before running the following experiments, when loading the datasets in Python, please rename the gold label column with the name 'emotion' and the instance text with 'text'.
 
 ### Experiment 1
 
