@@ -1,6 +1,6 @@
 # Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Domains
 
-This repository contains the code of the paper submitted to COLING 2022 "Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Domains".
+This repository contains the code of the paper accepted in COLING 2022 "Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Mediums".
 
 To download the emotion datasets and the lexicon resource, please go to the following links:
 
