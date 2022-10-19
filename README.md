@@ -1,6 +1,6 @@
 # Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Corpora
 
-This repository contains the code of the paper accepted in COLING 2022 ["Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Corpora"](https://arxiv.org/abs/2209.06701).
+This repository contains the code of the paper accepted in COLING 2022 ["Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Corpora"](https://aclanthology.org/2022.coling-1.592/).
 
 To download the emotion datasets and the lexicon resource, please go to the following links:
 
