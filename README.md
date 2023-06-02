@@ -81,8 +81,8 @@ Run ```nli_emolex_prompt.py --data_file 'your_dataset_file.tsv' --output_file 'y
 ```
 @inproceedings{plaza-del-arco-etal-2022-natural,
     title = "Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Corpora",
-    author = "Plaza-del-Arco, Flor Miriam  and
-      Mart{\'\i}n-Valdivia, Mar{\'\i}a-Teresa  and
+    author = "{{Plaza-del-Arco}}, {{Flor Miriam}} and
+      {{Mart{\'\i}n-Valdivia}}, {{Mar{\'\i}a-Teresa}}  and
       Klinger, Roman",
     booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
     month = oct,
