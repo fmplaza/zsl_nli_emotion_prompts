@@ -75,3 +75,21 @@ Run ```nli_emolex_prompt.py --data_file 'your_dataset_file.tsv' --output_file 'y
 --data_file: The emotion dataset path file
 
 --output_file: The output directory where the model predictions will be written. Format required: '.tsv'
+
+# Citation
+
+```
+@inproceedings{plaza-del-arco-etal-2022-natural,
+    title = "Natural Language Inference Prompts for Zero-shot Emotion Classification in Text across Corpora",
+    author = "Plaza-del-Arco, Flor Miriam  and
+      Mart{\'\i}n-Valdivia, Mar{\'\i}a-Teresa  and
+      Klinger, Roman",
+    booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+    month = oct,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.592",
+    pages = "6805--6817",
+    abstract = "Within textual emotion classification, the set of relevant labels depends on the domain and application scenario and might not be known at the time of model development. This conflicts with the classical paradigm of supervised learning in which the labels need to be predefined. A solution to obtain a model with a flexible set of labels is to use the paradigm of zero-shot learning as a natural language inference task, which in addition adds the advantage of not needing any labeled training data. This raises the question how to prompt a natural language inference model for zero-shot learning emotion classification. Options for prompt formulations include the emotion name anger alone or the statement {``}This text expresses anger{''}. With this paper, we analyze how sensitive a natural language inference-based zero-shot-learning classifier is to such changes to the prompt under consideration of the corpus: How carefully does the prompt need to be selected? We perform experiments on an established set of emotion datasets presenting different language registers according to different sources (tweets, events, blogs) with three natural language inference models and show that indeed the choice of a particular prompt formulation needs to fit to the corpus. We show that this challenge can be tackled with combinations of multiple prompts. Such ensemble is more robust across corpora than individual prompts and shows nearly the same performance as the individual best prompt for a particular corpus.",
+}
