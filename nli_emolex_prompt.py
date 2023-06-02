@@ -24,9 +24,9 @@ def compute_entailment(data, emolex_dic, prompts, output_file):
     model.to(device)
     model.eval()
 
-    text_list = test['text'].tolist()
-    label_list = test['emotion'].tolist()
-    id_text = test['id_text'].tolist()
+    text_list = data['text'].tolist()
+    label_list = data['emotion'].tolist()
+    id_text = data['id_text'].tolist()
 
     unique_labels = sorted(list(set(label_list)))
     print(unique_labels)
